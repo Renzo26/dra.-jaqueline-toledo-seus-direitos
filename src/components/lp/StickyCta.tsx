@@ -11,7 +11,7 @@ export function StickyCta() {
         className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-gold text-sm font-semibold text-wine-deep"
       >
         <MessageCircle className="size-5" />
-        Falar pelo WhatsApp
+        Falar com o escritório
       </a>
     </div>
   );
