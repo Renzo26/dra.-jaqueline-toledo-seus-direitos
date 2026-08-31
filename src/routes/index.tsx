@@ -19,6 +19,7 @@ import {
   Compass,
   Instagram,
   Quote,
+  MessageCircle,
 } from "lucide-react";
 import { WhatsAppButton, WHATSAPP_URL } from "@/components/lp/WhatsAppButton";
 import { StickyCta } from "@/components/lp/StickyCta";
@@ -253,7 +254,7 @@ function LandingPage() {
           ))}
         </div>
         <div className="mt-10 flex justify-center">
-          <WhatsAppButton>Analisar meu caso</WhatsAppButton>
+          <WhatsAppButton>Falar com o escritório</WhatsAppButton>
         </div>
       </Section>
 
@@ -282,7 +283,7 @@ function LandingPage() {
               quais direitos podem existir no seu caso.
             </p>
             <div className="mt-7">
-              <WhatsAppButton className="w-full">Conversar pelo WhatsApp</WhatsAppButton>
+              <WhatsAppButton className="w-full">Falar com o escritório</WhatsAppButton>
             </div>
           </div>
         </div>
@@ -322,7 +323,7 @@ function LandingPage() {
               ))}
             </ol>
             <div className="mt-9">
-              <WhatsAppButton>Receber orientação pelo WhatsApp</WhatsAppButton>
+              <WhatsAppButton>Falar com o escritório</WhatsAppButton>
             </div>
           </div>
         </div>
@@ -370,7 +371,7 @@ function LandingPage() {
               </div>
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
-              <WhatsAppButton>Falar com a Dra. Jaqueline</WhatsAppButton>
+              <WhatsAppButton>Falar com o escritório</WhatsAppButton>
               <a
                 href="https://instagram.com/dra.jaquelinethany"
                 target="_blank"
@@ -459,7 +460,7 @@ function LandingPage() {
           </p>
           <div className="mt-9 flex justify-center">
             <WhatsAppButton variant="gold" className="w-full sm:w-auto">
-              Falar com a Dra. Jaqueline no WhatsApp
+              Falar com o escritório
             </WhatsAppButton>
           </div>
         </div>
