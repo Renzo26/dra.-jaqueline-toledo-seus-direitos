@@ -195,7 +195,7 @@ function LandingPage() {
           </div>
 
           {/* Foto da profissional — lado direito com botão de WhatsApp */}
-          <div className="relative min-h-[420px] overflow-hidden sm:min-h-[560px] lg:min-h-[680px]">
+          <div className="relative min-h-[640px] overflow-hidden sm:min-h-[760px] lg:min-h-[860px]">
             <img
               src={heroImg}
               alt="Dra. Jaqueline Toledo, advogada trabalhista"
