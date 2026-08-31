@@ -19,6 +19,7 @@ import {
   Compass,
   Instagram,
   Quote,
+  MessageCircle,
 } from "lucide-react";
 import { WhatsAppButton, WHATSAPP_URL } from "@/components/lp/WhatsAppButton";
 import { StickyCta } from "@/components/lp/StickyCta";
@@ -150,55 +151,73 @@ function LandingPage() {
   return (
     <main className="overflow-x-hidden bg-background pb-20 md:pb-0">
       {/* HERO */}
-      <header className="relative isolate overflow-hidden bg-[image:var(--gradient-wine)] text-primary-foreground">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-24 -top-24 size-[28rem] rounded-full bg-gold/10 blur-3xl"
-        />
-        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 pb-14 pt-10 sm:px-8 md:grid-cols-2 md:gap-14 md:pb-24 md:pt-16">
-          <div className="reveal">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-gold">
+      <header className="relative isolate overflow-hidden bg-background">
+        <div className="grid w-full grid-cols-1 lg:grid-cols-2">
+          {/* Texto — lado esquerdo */}
+          <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 md:py-20 lg:py-24">
+            <span className="inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-gold">
+              <span className="h-px w-8 bg-gold" />
               Advocacia Trabalhista
             </span>
-            <h1 className="mt-6 text-4xl leading-[1.08] sm:text-5xl md:text-[3.4rem]">
+            <h1 className="mt-5 max-w-xl font-serif text-4xl leading-[1.08] sm:text-5xl md:text-[3.1rem]">
               Teve seus direitos desrespeitados no trabalho?
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+            <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
               Receba orientação jurídica para entender seus direitos em casos de acidente de
               trabalho, doença ocupacional, rescisão e outras questões trabalhistas.
             </p>
-            <div className="mt-8">
-              <WhatsAppButton className="w-full sm:w-auto" variant="gold">
-                Quero entender meus direitos
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <WhatsAppButton variant="gold" className="w-full sm:w-auto">
+                Falar com o escritório
               </WhatsAppButton>
+              <a
+                href="#servicos"
+                className="inline-flex h-14 w-full items-center justify-center rounded-full border border-gold/60 px-8 text-base font-medium text-primary transition-colors hover:bg-gold/10 sm:w-auto"
+              >
+                Conheça nossa atuação
+              </a>
             </div>
-            <ul className="mt-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+            <ul className="mt-9 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
               {trustItems.map((t) => (
                 <li
                   key={t}
-                  className="flex min-w-0 items-center gap-2 text-sm text-primary-foreground/85"
+                  className="flex min-w-0 items-center gap-2 text-sm text-foreground/80"
                 >
                   <Check className="size-4 shrink-0 text-gold" />
                   <span>{t}</span>
                 </li>
               ))}
             </ul>
+            <div className="mt-10 h-px w-full bg-gradient-to-r from-gold/60 via-gold/20 to-transparent" />
+            <p className="mt-4 text-sm tracking-wide text-muted-foreground">
+              Dra. Jaqueline Toledo · Direito Trabalhista e Previdenciário · Atendimento 100% online
+            </p>
           </div>
 
-          <div className="reveal relative mx-auto w-full max-w-sm md:max-w-none">
-            <div
-              aria-hidden
-              className="absolute -inset-3 rounded-[2rem] border border-gold/30 md:-inset-4"
-            />
+          {/* Foto da profissional — lado direito com botão de WhatsApp */}
+          <div className="relative min-h-[420px] overflow-hidden sm:min-h-[560px] lg:min-h-[680px]">
             <img
               src={heroImg}
               alt="Dra. Jaqueline Toledo, advogada trabalhista"
-              className="relative w-full rounded-[1.75rem] object-cover shadow-[var(--shadow-soft)]"
+              className="absolute inset-0 size-full object-cover object-top"
               width={1200}
               height={1800}
               fetchPriority="high"
             />
-            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-card/95 px-4 py-2 text-xs font-medium text-foreground shadow-[var(--shadow-card)]">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-wine-deep/35 via-transparent to-transparent"
+            />
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Falar pelo WhatsApp"
+              className="absolute bottom-6 right-6 inline-flex size-16 items-center justify-center rounded-full bg-[image:var(--gradient-wine)] text-primary-foreground shadow-[var(--shadow-soft)] ring-1 ring-gold/50 transition-transform duration-300 hover:scale-110"
+            >
+              <MessageCircle className="size-7" />
+            </a>
+            <div className="absolute bottom-6 left-6 flex items-center gap-2 rounded-full bg-card/95 px-4 py-2 text-xs font-medium text-foreground shadow-[var(--shadow-card)]">
               <span className="flex gap-0.5 text-gold">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="size-3.5 fill-current" />
@@ -235,7 +254,7 @@ function LandingPage() {
           ))}
         </div>
         <div className="mt-10 flex justify-center">
-          <WhatsAppButton>Analisar meu caso</WhatsAppButton>
+          <WhatsAppButton>Falar com o escritório</WhatsAppButton>
         </div>
       </Section>
 
@@ -264,7 +283,7 @@ function LandingPage() {
               quais direitos podem existir no seu caso.
             </p>
             <div className="mt-7">
-              <WhatsAppButton className="w-full">Conversar pelo WhatsApp</WhatsAppButton>
+              <WhatsAppButton className="w-full">Falar com o escritório</WhatsAppButton>
             </div>
           </div>
         </div>
@@ -304,7 +323,7 @@ function LandingPage() {
               ))}
             </ol>
             <div className="mt-9">
-              <WhatsAppButton>Receber orientação pelo WhatsApp</WhatsAppButton>
+              <WhatsAppButton>Falar com o escritório</WhatsAppButton>
             </div>
           </div>
         </div>
@@ -352,7 +371,7 @@ function LandingPage() {
               </div>
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
-              <WhatsAppButton>Falar com a Dra. Jaqueline</WhatsAppButton>
+              <WhatsAppButton>Falar com o escritório</WhatsAppButton>
               <a
                 href="https://instagram.com/dra.jaquelinethany"
                 target="_blank"
@@ -441,7 +460,7 @@ function LandingPage() {
           </p>
           <div className="mt-9 flex justify-center">
             <WhatsAppButton variant="gold" className="w-full sm:w-auto">
-              Falar com a Dra. Jaqueline no WhatsApp
+              Falar com o escritório
             </WhatsAppButton>
           </div>
         </div>
