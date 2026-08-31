@@ -23,9 +23,9 @@ import {
 import { WhatsAppButton, WHATSAPP_URL } from "@/components/lp/WhatsAppButton";
 import { StickyCta } from "@/components/lp/StickyCta";
 import { Section, Eyebrow, SectionTitle } from "@/components/lp/Section";
-import heroImg from "@/assets/hero.jpg.asset.json";
-import sobreImg from "@/assets/sobre.jpg.asset.json";
-import trabalhoImg from "@/assets/trabalho.jpg.asset.json";
+import heroImg from "@/assets/hero.jpg";
+import sobreImg from "@/assets/sobre.jpg";
+import trabalhoImg from "@/assets/trabalho.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -191,7 +191,7 @@ function LandingPage() {
               className="absolute -inset-3 rounded-[2rem] border border-gold/30 md:-inset-4"
             />
             <img
-              src={heroImg.url}
+              src={heroImg}
               alt="Dra. Jaqueline Toledo, advogada trabalhista"
               className="relative w-full rounded-[1.75rem] object-cover shadow-[var(--shadow-soft)]"
               width={1200}
@@ -276,7 +276,7 @@ function LandingPage() {
           <div className="relative order-2 lg:order-1">
             <div aria-hidden className="absolute -inset-3 rounded-[2rem] border border-gold/30" />
             <img
-              src={trabalhoImg.url}
+              src={trabalhoImg}
               alt="Dra. Jaqueline Toledo em atendimento online"
               className="relative w-full rounded-[1.75rem] object-cover shadow-[var(--shadow-soft)]"
               width={1000}
@@ -316,7 +316,7 @@ function LandingPage() {
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div aria-hidden className="absolute -inset-3 rounded-[2rem] border border-gold/30" />
             <img
-              src={sobreImg.url}
+              src={sobreImg}
               alt="Retrato profissional da advogada Jaqueline Toledo"
               className="relative w-full rounded-[1.75rem] object-cover shadow-[var(--shadow-soft)]"
               width={1100}
