@@ -18,7 +18,7 @@ Instagram: @dra.jaquelinethany
 O objetivo principal da landing page é transformar visitantes vindos principalmente de anúncios do Meta Ads e Instagram em contatos pelo WhatsApp.
 
 WhatsApp principal:
-+55 11 95196-6546
++55 11 95807-4409
 
 PÚBLICO-ALVO
 
@@ -59,7 +59,7 @@ Exemplos:
 "Receber orientação pelo WhatsApp"
 
 O botão deve abrir:
-https://wa.me/5511951966546
+https://wa.me/5511958074409
 
 HERO
 

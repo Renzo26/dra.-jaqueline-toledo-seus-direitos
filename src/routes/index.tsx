@@ -471,7 +471,7 @@ function LandingPage() {
         <p className="mt-1">Direito Trabalhista e Previdenciário · Atendimento 100% online</p>
         <p className="mt-4">
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="underline">
-            (11) 95196-6546
+            (11) 95807-4409
           </a>
         </p>
         <p className="mx-auto mt-5 max-w-2xl leading-relaxed">

@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { Button, type ButtonProps } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export const WHATSAPP_URL = "https://wa.me/5511951966546";
+export const WHATSAPP_URL = "https://wa.me/5511958074409";
 
 interface Props extends Pick<ButtonProps, "variant" | "size"> {
   children: React.ReactNode;
